@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
 
     <title>&mdash; Booking app</title>
 </head>
@@ -38,14 +38,50 @@
                     <span class="user-nav_notification">13</span>
                 </div>
                 <div class="user-nav_user">
-                    <img src="img/user.jpg" alt="User photo" class="user-nav_user-photo">
+                    <img src="./img/user.jpg" alt="User photo" class="user-nav_user-photo">
                     <span class="user-nav_user-name">Noah</span>
                 </div>
             </nav>
         </header>
         <div class="content">
             <nav class="sidebar">
-                Navigation
+                <ul class="side-nav">
+                    <li class="side-nav_item side-nav_item--active">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Hotel</span>
+                        </a>
+                    </li>
+                    <li class="side-nav_item">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                            </svg>
+                            <span>Flight</span>
+                        </a>
+                    </li>
+                    <li class="side-nav_item">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                            </svg>
+                            <span>Car rental</span>
+                        </a>
+                    </li>
+                    <li class="side-nav_item">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                            <span>Tours</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="legal">
+                    &copy; 2021 by trillo. All rights reserved.
+                </div>
             </nav>
             <main class="hotel-view"> Hotel view</main>
         </div>
