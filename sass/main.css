@@ -32,6 +32,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 200;
@@ -185,12 +191,35 @@ body {
   margin-top: 3.5rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+}
+
 .side-nav_item {
   position: relative;
 }
 
 .side-nav_item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav_item:not(:last-child) {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav_item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .side-nav_item::before {
@@ -235,6 +264,15 @@ body {
           align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav_link:link, .side-nav_link:visited {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem;
+  }
+}
+
 .side-nav_icon {
   width: 1.75rem;
   height: 1.75rem;
@@ -249,6 +287,12 @@ body {
   color: var(--color-grey-light-4);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
+}
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,9 +302,13 @@ body {
           justify-content: space-between;
 }
 
+.gallery_item {
+  background-color: aquamarine;
+}
+
 .gallery_photo {
-  width: 325px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: -1.3rem;
@@ -281,7 +329,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 1.5rem 3rem;
+  padding: 4rem 3rem;
 }
 
 .overview_stars {
@@ -426,6 +474,13 @@ body {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .review {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .review_text {
   margin-bottom: 2rem;
   font-style: italic;
@@ -488,6 +543,12 @@ body {
   text-align: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .cta {
+    padding: 2.5rem 0;
+  }
+}
+
 .cta_book-now {
   font-size: 1.2rem;
   font-weight: 300;
@@ -548,6 +609,85 @@ body {
   top: 0;
 }
 
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list_item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+
+.list_item:before {
+  content: '';
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.7rem;
+  background-image: url(../img/chevron-thin-right.svg);
+  mask-size: cover;
+  background-color: var(--color-primary);
+  -webkit-mask-image: url(../img/chevron-thin-right.svg);
+  -webkit-mask-size: cover;
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-light-3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recommend_count {
+  margin-right: auto;
+}
+
+.recommend_friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recommend_photo {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 5rem;
+  width: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.recommend_photo:not(:last-child) {
+  margin-right: -2rem;
+}
+
+.recommend_photo:hover {
+  color: var(--color-primary);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  z-index: 100;
+  border: 0.3rem solid currentColor;
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -577,6 +717,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -624,6 +773,13 @@ body {
           box-shadow: var(--shadow-light);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .description {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+}
+
 .user-reviews {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -638,78 +794,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.list {
-  list-style: none;
-  margin: 3rem 0;
-  padding: 3rem;
-  border-top: var(--line);
-  border-bottom: var(--line);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.list_item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin-bottom: 0.7rem;
-}
-
-.list_item:before {
-  content: '';
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  margin-right: 0.7rem;
-  background-image: url(../img/chevron-thin-right.svg);
-  mask-size: cover;
-  background-color: var(--color-primary);
-  -webkit-mask-image: url(../img/chevron-thin-right.svg);
-  -webkit-mask-size: cover;
-}
-
-.recommend {
-  font-size: 1.3rem;
-  color: var(--color-grey-light-3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.recommend_photo {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  height: 5rem;
-  width: 4rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 3px solid white;
-  border-radius: 50%;
-}
-
-.recommend_photo:not(:last-child) {
-  margin-right: -1.5rem;
-}
-
-.recommend_photo:hover {
-  color: var(--color-primary);
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  z-index: 100;
-  border: 0.3rem solid currentColor;
-  -webkit-box-shadow: var(--shadow-dark);
-          box-shadow: var(--shadow-dark);
-}
-
-.recommend_count {
-  margin-right: auto;
 }
 /*# sourceMappingURL=main.css.map */
